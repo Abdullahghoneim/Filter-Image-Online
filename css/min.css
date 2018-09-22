@@ -1,0 +1,14 @@
+
+/*SOME CSS*/
+body{
+    height: 800px;
+}
+#canvas{
+    margin: auto;
+    background-color: #ececec;
+    width: 100%;
+    height: 100%;
+}
+.btn-disabled{
+    color: #fff !important;
+}

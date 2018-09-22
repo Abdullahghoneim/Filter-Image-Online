@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>online image filter</title>
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/min.css">
+
+</head>
+<body>
+<nav class="navbar  bg-dark mb-5">
+    <div class="container">
+        <a style="color: white" class="navbar-brand">Online Image Filter</a>
+    </div>
+</nav>
+<div class="container">
+    <div class="row" >
+        <div class="col-md-10 m-auto" >
+            <div class="custom-file mb-3">
+                <input class="custom-file-input" id="upload-file" type="file">
+                <label class="custom-file-label" for="upload-file">Choose File</label>
+            </div>
+            <canvas id="canvas"></canvas>
+            <h4 class="text-center my-3">Filters</h4>
+            <div class="row text-center" >
+            <!-- Brightness -->
+                <div class="col-md-3">
+                    <div class="btn-group btn-group-sm">
+                            <button class="filter-btn brightness-remove btn btn-success">-</button>
+                            <button class="btn btn-success btn-disabled" disabled>Brightness </button>
+                            <button class="filter-btn brightness-add btn-success "> + </button>
+                    </div>
+                </div> <!-- End Brightness -->
+                <div class="col-md-3">
+                    <div class="btn-group btn-group-sm">
+                        <button class="filter-btn contrast-remove btn btn-success">-</button>
+                        <button class="btn btn-success btn-disabled btn-lg" disabled>Contrast </button>
+                        <button class="filter-btn contrast-add btn-success "> + </button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="btn-group btn-group-sm">
+                        <button class="filter-btn saturation-remove btn btn-success">-</button>
+                        <button class="btn btn-success btn-disabled" disabled>Saturation </button>
+                        <button class="filter-btn saturation-add btn-success "> + </button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="btn-group btn-group-sm">
+                        <button class="filter-btn vibrance-remove btn btn-success">-</button>
+                        <button class="btn btn-success btn-disabled" disabled>Vibrance </button>
+                        <button class="filter-btn vibrance-add btn-success "> + </button>
+                    </div>
+                </div>
+            </div> <!-- end row -->
+            <h4 class="text-center my-4"> Effects</h4>
+            <div class="row"> <!-- Effects Row -->
+                <div class="col-3">
+                    <button class="btn btn-dark btn-block filter-btn vintage">Vintage</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-dark btn-block filter-btn lomo">Lomo</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-dark btn-block filter-btn clarity">Clarity</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-dark btn-block filter-btn sinCity">Sin City</button>
+                </div>
+            </div> <!-- End Effects row -->
+            <br>
+            <br>
+            <div class="row"> <!-- Effects2 Row -->
+                <div class="col-3">
+                    <button class="btn btn-dark btn-block filter-btn crossPress">Cross Process</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-dark btn-block filter-btn pinhole">Pinhole</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-dark btn-block filter-btn nostalgia">Nostalgia</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-dark btn-block filter-btn herMajesty">Her Majesty</button>
+                </div>
+            </div> <!-- End Effects2 row -->
+            <div class="row my-5">
+                <div class="col-md-6">
+                    <button id="download-btn" class="btn btn-primary btn-block  ">Download Image</button>
+                </div>
+                <div class="col-md-6">
+                    <button id="revert-btn" class="btn btn-danger btn-block  ">Remove Filter</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container text-center">
+    <h5>Copy : &copy;Filter Image Online</h5>
+    <p>By | AbdullahGhoneim</p>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.full.min.js"></script>
+<script src="js/min.js"></script>
+
+</body>
+</html>
